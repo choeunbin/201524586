@@ -3,6 +3,18 @@
 #include <fcntl.h>
 #include "kbhit.h"
 
+/**
+ * @file kbhit.c
+ */
+
+
+
+/**	@fn kbhit
+ 	@param void
+	@brief recognition for keyboard hit
+	@return 1 is returned when a keyboard input is reconized.
+*/
+
 int kbhit(void){
    struct termios oldt, newt;
    int ch;
@@ -27,6 +39,12 @@ int kbhit(void){
 
    return 0;
 }
+
+
+/**	@fn getch
+	@brief when user inputs some data through keyboard, the data is not saved in buffer.
+	*/
+
 
 int getch(void){
    int ch;

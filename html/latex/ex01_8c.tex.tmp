@@ -1,0 +1,108 @@
+\hypertarget{ex01_8c}{}\section{ex01.\+c File Reference}
+\label{ex01_8c}\index{ex01.\+c@{ex01.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}kbhit.\+h\char`\"{}}\\*
+Include dependency graph for ex01.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries L\+E\+FT}~97\hypertarget{ex01_8c_a437ef08681e7210d6678427030446a54}{}\label{ex01_8c_a437ef08681e7210d6678427030446a54}
+
+\item 
+\#define {\bfseries R\+I\+G\+HT}~100\hypertarget{ex01_8c_a80fb826a684cf3f0d306b22aa100ddac}{}\label{ex01_8c_a80fb826a684cf3f0d306b22aa100ddac}
+
+\item 
+\#define {\bfseries UP}~119\hypertarget{ex01_8c_a1965eaca47dbf3f87acdafc2208f04eb}{}\label{ex01_8c_a1965eaca47dbf3f87acdafc2208f04eb}
+
+\item 
+\#define {\bfseries D\+O\+WN}~115\hypertarget{ex01_8c_a4193cd1c8c2e6ebd0e056fa2364a663f}{}\label{ex01_8c_a4193cd1c8c2e6ebd0e056fa2364a663f}
+
+\item 
+\#define {\bfseries P\+A\+U\+SE}~112\hypertarget{ex01_8c_a5666ac5930c9f903698073ab1fa694f7}{}\label{ex01_8c_a5666ac5930c9f903698073ab1fa694f7}
+
+\item 
+\#define {\bfseries E\+SC}~27\hypertarget{ex01_8c_a4af1b6159e447ba72652bb7fcdfa726e}{}\label{ex01_8c_a4af1b6159e447ba72652bb7fcdfa726e}
+
+\item 
+\#define {\bfseries M\+A\+P\+\_\+\+Start\+\_\+X}~3\hypertarget{ex01_8c_a8db75fb4ba17100521db6c7a7d082580}{}\label{ex01_8c_a8db75fb4ba17100521db6c7a7d082580}
+
+\item 
+\#define {\bfseries M\+A\+P\+\_\+\+Start\+\_\+Y}~2\hypertarget{ex01_8c_afa208d3334d8f0825d865b00ea96749a}{}\label{ex01_8c_afa208d3334d8f0825d865b00ea96749a}
+
+\item 
+\#define {\bfseries M\+A\+P\+\_\+X}~30\hypertarget{ex01_8c_ae770f2b86f2572bf87df0923ed15213d}{}\label{ex01_8c_ae770f2b86f2572bf87df0923ed15213d}
+
+\item 
+\#define {\bfseries M\+A\+P\+\_\+Y}~20\hypertarget{ex01_8c_a7fd314a0b2f300946acb684eb794c224}{}\label{ex01_8c_a7fd314a0b2f300946acb684eb794c224}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ex01_8c_aa44f187d8a90f4b2b9ba08c40ecbda86}{draw\+\_\+map} (void)\hypertarget{ex01_8c_aa44f187d8a90f4b2b9ba08c40ecbda86}{}\label{ex01_8c_aa44f187d8a90f4b2b9ba08c40ecbda86}
+
+\begin{DoxyCompactList}\small\item\em draw the edge of game map \end{DoxyCompactList}\item 
+void \hyperlink{ex01_8c_aeea27cafe0853b7b5ca7f7257b609547}{title} (void)\hypertarget{ex01_8c_aeea27cafe0853b7b5ca7f7257b609547}{}\label{ex01_8c_aeea27cafe0853b7b5ca7f7257b609547}
+
+\begin{DoxyCompactList}\small\item\em first display when execute game. it contains how to move of play the game. \end{DoxyCompactList}\item 
+void \hyperlink{ex01_8c_a3aea9deb2a0bfea9ff05a898f4822e31}{reset} (void)\hypertarget{ex01_8c_a3aea9deb2a0bfea9ff05a898f4822e31}{}\label{ex01_8c_a3aea9deb2a0bfea9ff05a898f4822e31}
+
+\begin{DoxyCompactList}\small\item\em reset all the variables \end{DoxyCompactList}\item 
+void \hyperlink{ex01_8c_a7b1e0cd68f48011ba7d4f94d0d1411a5}{food} (void)\hypertarget{ex01_8c_a7b1e0cd68f48011ba7d4f94d0d1411a5}{}\label{ex01_8c_a7b1e0cd68f48011ba7d4f94d0d1411a5}
+
+\begin{DoxyCompactList}\small\item\em make a food in random position. \end{DoxyCompactList}\item 
+void \hyperlink{ex01_8c_a157121e398b8c339b0f6fc05f8a7e152}{pause\+\_\+game} (void)\hypertarget{ex01_8c_a157121e398b8c339b0f6fc05f8a7e152}{}\label{ex01_8c_a157121e398b8c339b0f6fc05f8a7e152}
+
+\begin{DoxyCompactList}\small\item\em when user want to pause, the game is stopped temporarily \end{DoxyCompactList}\item 
+void {\bfseries move} (int dir)\hypertarget{ex01_8c_ac7161fab66791e77c06817452e294bea}{}\label{ex01_8c_ac7161fab66791e77c06817452e294bea}
+
+\item 
+void \hyperlink{ex01_8c_ac6eee06d222fdd045222d6510b4209f7}{game\+\_\+over} (void)\hypertarget{ex01_8c_ac6eee06d222fdd045222d6510b4209f7}{}\label{ex01_8c_ac6eee06d222fdd045222d6510b4209f7}
+
+\begin{DoxyCompactList}\small\item\em when the snake crushes on the wall, the game will be overed \end{DoxyCompactList}\item 
+void {\bfseries gotoxy} (int x, int y, char $\ast$s)\hypertarget{ex01_8c_a48ae3bd9ff96f5921bdd011c72645120}{}\label{ex01_8c_a48ae3bd9ff96f5921bdd011c72645120}
+
+\item 
+int {\bfseries main} ()\hypertarget{ex01_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{ex01_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries x} \mbox{[}100\mbox{]}\hypertarget{ex01_8c_a5d9353e006bc18a21e8cbdee87d36a2f}{}\label{ex01_8c_a5d9353e006bc18a21e8cbdee87d36a2f}
+
+\item 
+int {\bfseries y} \mbox{[}100\mbox{]}\hypertarget{ex01_8c_a76e44bc53d2efde76380be19dc9ebbc3}{}\label{ex01_8c_a76e44bc53d2efde76380be19dc9ebbc3}
+
+\item 
+int {\bfseries length}\hypertarget{ex01_8c_a9f59b34b1f25fe00023291b678246bcc}{}\label{ex01_8c_a9f59b34b1f25fe00023291b678246bcc}
+
+\item 
+int {\bfseries speed}\hypertarget{ex01_8c_a218b4f7c6cc2681a99c23a3b089d68b1}{}\label{ex01_8c_a218b4f7c6cc2681a99c23a3b089d68b1}
+
+\item 
+int {\bfseries score}\hypertarget{ex01_8c_aef160b7437d94056f1dc59646cd5b87d}{}\label{ex01_8c_aef160b7437d94056f1dc59646cd5b87d}
+
+\item 
+int {\bfseries dir}\hypertarget{ex01_8c_a851cf68c8f607573c1a5e987784c83f6}{}\label{ex01_8c_a851cf68c8f607573c1a5e987784c83f6}
+
+\item 
+int {\bfseries key}\hypertarget{ex01_8c_a35af0be900467fedbb610bd6ea65ed78}{}\label{ex01_8c_a35af0be900467fedbb610bd6ea65ed78}
+
+\item 
+int {\bfseries food\+\_\+x}\hypertarget{ex01_8c_a1e317647767ec5615e3892be2c1a6157}{}\label{ex01_8c_a1e317647767ec5615e3892be2c1a6157}
+
+\item 
+int {\bfseries food\+\_\+y}\hypertarget{ex01_8c_a347086c47428c25352251afc4403007b}{}\label{ex01_8c_a347086c47428c25352251afc4403007b}
+
+\item 
+int {\bfseries best\+\_\+score} = 0\hypertarget{ex01_8c_ac3816f3d5c6e0dce27cf9b2b18ed94ca}{}\label{ex01_8c_ac3816f3d5c6e0dce27cf9b2b18ed94ca}
+
+\item 
+int {\bfseries last\+\_\+score} = 0\hypertarget{ex01_8c_a99899a6dc125afa62fa9ff5b9f3a30f7}{}\label{ex01_8c_a99899a6dc125afa62fa9ff5b9f3a30f7}
+
+\end{DoxyCompactItemize}

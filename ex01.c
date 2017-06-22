@@ -1,3 +1,5 @@
+/**	@file ex01.c  */
+
 #include <stdio.h>
 #include <unistd.h> //for sleep()
 #include <stdlib.h>
@@ -77,7 +79,10 @@ int main(){
 
 
 
+/**	@fn draw_map
+	@brief draw the edge of game map
 
+*/
 void draw_map(void){
    int i, j;
    for(i=0; i<MAP_X; i++){
@@ -93,6 +98,9 @@ void draw_map(void){
 } //draw the edge of map
 
 
+/**	@fn title
+	@brief first display when execute game. it contains how to move of play the game.
+*/
 void title(void){
    int i, j;
 
@@ -124,7 +132,8 @@ void title(void){
    reset();
 }
 
-
+/** 	@fn reset
+	@brief reset all the variables */
 void reset(void){
    int i;
    system("clear");
@@ -145,6 +154,9 @@ void reset(void){
    food();
 }
 
+/**	@fn food
+	@brief make a food in random position.
+*/
 void food(void){
    int i;
    int food_crush = 0; //The value is 1 when food is on the snake
@@ -174,7 +186,8 @@ void food(void){
 	break;
    }
 }
-
+/**	@fn pause_game 
+	@brief when user want to pause, the game is stopped temporarily */
 void pause_game(void){
    while(1){
 	if(key==PAUSE){
@@ -193,6 +206,10 @@ void pause_game(void){
 }
 
 
+/**	@fn move
+	@param int direction
+	@brief move the snake to the direction which the user selets
+*/
 void move(int dir){
    int i;
    
@@ -228,6 +245,10 @@ void move(int dir){
    gotoxy(MAP_Start_X+x[i], MAP_Start_Y+y[i], "⊙ ");
 }
 
+
+/**	@fn game_over
+	@brief when the snake crushes on the wall, the game will be overed
+*/
 void game_over(void) {
    gotoxy(MAP_Start_X+(MAP_X/2)-6, MAP_Start_Y+5,"┌----------------------┐");
    gotoxy(MAP_Start_X+(MAP_X/2)-6, MAP_Start_Y+6,"│   G A M E  O V E R   │");
