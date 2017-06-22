@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include <unistd.h> //for sleep()
 #include <stdlib.h>
-#include <time.h>
+#include <time.h>   //for random number creation
 #include "kbhit.h"
 
-#define LEFT 97
-#define RIGHT 100
-#define UP 119
-#define DOWN 115
-#define PAUSE 112
-#define ESC 27
+#define LEFT 97		//key 'a'
+#define RIGHT 100	//key 'd'
+#define UP 119		//key 'w'
+#define DOWN 115	//key 's'
+#define PAUSE 112	//key 'p'
+#define ESC 27		//key 'esc'
 
 #define MAP_Start_X 3
 #define MAP_Start_Y 2
@@ -17,13 +17,13 @@
 #define MAP_Y 20
 
 int x[100], y[100];
-int length;
+int length;		//the length of snake
 int speed;
 int score;
-int dir; //direction to move
+int dir; 		//direction to move
 int key;
-int food_x, food_y;
-int best_score = 0;
+int food_x, food_y;	//place where the food is 
+int best_score = 0;	//the highest score
 int last_score = 0;
 
 void draw_map(void); //draw game map
@@ -72,8 +72,10 @@ int main(){
    return 0;
 
 }
-
 //end of main
+
+
+
 
 
 void draw_map(void){
@@ -88,7 +90,8 @@ void draw_map(void){
    for(i=0; i<MAP_X; i++){
 	gotoxy(MAP_Start_X+i, MAP_Start_Y+MAP_Y-1, "■  ");
    }
-}
+} //draw the edge of map
+
 
 void title(void){
    int i, j;
@@ -128,17 +131,17 @@ void reset(void){
    draw_map();
    while (kbhit()) getch();
 
-   dir = LEFT;
-   speed = 100000;
-   length = 5;
-   score = 0;
+   dir = LEFT;			//initialize the direction
+   speed = 100000;		//initialize the speed
+   length = 5;			//initialize the length
+   score = 0;			//initialize the score to zero
    for (i=0; i<length; i++){
 	x[i]=MAP_X/2 + i;
 	y[i]=MAP_Y/2;
 	gotoxy(MAP_Start_X+x[i], MAP_Start_Y+y[i], "◇ ");
-   }
+   }	// the tail of snake
 
-   gotoxy(MAP_Start_X + x[0], MAP_Start_Y+y[0], "⊙ ");
+   gotoxy(MAP_Start_X + x[0], MAP_Start_Y+y[0], "⊙ ");	//the head
    food();
 }
 
@@ -161,8 +164,8 @@ void food(void){
 		food_crush = 1;
 		r++;
 		break;
-	   }
-	}
+	   }  
+	}	//when eat the food
 	
 	if(food_crush==1) continue;
 
@@ -189,10 +192,11 @@ void pause_game(void){
    }
 }
 
+
 void move(int dir){
    int i;
    
-   printf("\b ");
+   printf("\b "); //for delete input direction
    if (x[0]==food_x&&y[0]==food_y){
 	score += 10;
 	food();
